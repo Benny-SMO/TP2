@@ -1,11 +1,11 @@
-public class membro {
+public class Membro {
     private int id;
     private String numeroSocio;
     private String primeiroNome;
     private String apelido;
     private String email;
 
-    public membro(int id, String numeroSocio, String primeiroNome, String apelido, String email) {
+    public Membro(int id, String numeroSocio, String primeiroNome, String apelido, String email) {
         this.id = id;
         this.numeroSocio = numeroSocio;
         this.primeiroNome = primeiroNome;

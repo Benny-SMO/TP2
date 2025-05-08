@@ -1,11 +1,11 @@
-import javax.swing.*;
 import java.awt.*;
 import java.util.List;
+import javax.swing.*;
 
 public class GestaoLivrosUI extends JFrame {
 
-    private DefaultListModel<livro> listModel = new DefaultListModel<>();
-    private JList<livro> listaLivros = new JList<>(listModel);
+    private DefaultListModel<Livro> listModel = new DefaultListModel<>();
+    private JList<Livro> listaLivros = new JList<>(listModel);
 
     public GestaoLivrosUI() {
         setTitle("Gestão de Livros");
@@ -38,8 +38,8 @@ public class GestaoLivrosUI extends JFrame {
 
     private void atualizarLista() {
         listModel.clear();
-        List<livro> livros = LivroDAO.getLivros();
-        for (livro l : livros) {
+        List<Livro> livros = LivroDAO.getLivros();
+        for (Livro l : livros) {
             listModel.addElement(l);
         }
     }
@@ -73,7 +73,7 @@ public class GestaoLivrosUI extends JFrame {
     }
 
     private void removerLivro() {
-        livro selecionado = listaLivros.getSelectedValue();
+        Livro selecionado = listaLivros.getSelectedValue();
         if (selecionado != null) {
             LivroDAO.removerLivro(selecionado);
             atualizarLista();

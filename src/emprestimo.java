@@ -2,13 +2,13 @@ import java.util.Date;
 
 public class emprestimo {
     private int id;
-    private livro livro;
-    private membro membro;
+    private Livro livro;
+    private Membro membro;
     private Date dataEmprestimo;
     private Date dataDevolucaoPrevista;
     private Date dataDevolucaoEfetiva;
 
-    public emprestimo(int id, livro livro, membro membro, Date dataEmprestimo, Date dataDevolucaoPrevista) {
+    public emprestimo(int id, Livro livro, Membro membro, Date dataEmprestimo, Date dataDevolucaoPrevista) {
         this.id = id;
         this.livro = livro;
         this.membro = membro;
@@ -18,8 +18,8 @@ public class emprestimo {
     }
 
     public int getId() { return id; }
-    public livro getLivro() { return livro; }
-    public membro getMembro() { return membro; }
+    public Livro getLivro() { return livro; }
+    public Membro getMembro() { return membro; }
     public Date getDataEmprestimo() { return dataEmprestimo; }
     public Date getDataDevolucaoPrevista() { return dataDevolucaoPrevista; }
     public Date getDataDevolucaoEfetiva() { return dataDevolucaoEfetiva; }
